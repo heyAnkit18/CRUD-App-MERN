@@ -1,8 +1,10 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-const dotenv = require('dotenv');
-const cors = require('cors');
+import express from 'express';
+import mongoose from 'mongoose'; 
+
+import bodyParser from 'body-parser';
+import dotenv from 'dotenv';
+import cors from 'cors';
+import routes from './Routes/userRoutes.js';
 
 const app = express();
 
@@ -23,8 +25,10 @@ const connectDB = () => {
 
 connectDB();
 
-
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
+// Use the imported routes
+app.use("/api", routes);
