@@ -70,3 +70,19 @@ export const update=async(req,res)=>{
     }
 }
 
+//Api for 'Delete' particular user data by id
+
+export const deleteUser=async(req,res)=>{
+    try{
+        const id =req.params.id;
+        const userExist=await User.findById(id);
+        if(!userExist){
+            return res.status(401).json({ message: "User not found" })
+        }
+        await User.findByIdAndDelete(id)
+        res.status(200).json({msg:"User deleted successfully"});
+
+    }  catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}
