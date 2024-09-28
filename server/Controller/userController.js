@@ -35,12 +35,12 @@ export const getAll = async (req, res) => {
 
 //Api for 'fetch' particular user data
 
-export const getOne = async(req, res) => {
+export const getOne = async (req, res) => {
     try {
-        // Extract the user ID from request parameters
+
         const id = req.params.id;
 
-        // Use findById() to find a specific user by their ID
+
         const userExist = await User.findById(id)
         if (!userExist) {
             return res.status(404).json({ message: "User not found" });
@@ -53,5 +53,20 @@ export const getOne = async(req, res) => {
 }
 
 
+//Api for 'update' particular user data
 
+export const update=async(req,res)=>{
+    try{
+        const id =req.params.id;
+        const userExist=await User.findById(id);
+        if(!userExist){
+            return res.status(401).json({ message: "User not found" })
+        }
+        const updateData = await User.findByIdAndUpdate(id, req.body, {new: true})
+        res.status(200).json(updateData);
+
+    }  catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}
 
