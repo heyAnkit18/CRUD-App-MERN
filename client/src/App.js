@@ -2,6 +2,7 @@
 import './App.css';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import User from './Components/GetUser/User';
+import Add from './Components/AddUser/Add';
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
     },
     {
       path:"/add",
-      element: "User Add page",
+      element: <Add/>,
     },
     {
       path:"/edit",
