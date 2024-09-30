@@ -27,7 +27,7 @@ const User = () => {
             <td>ankit@gmail.com</td>
             <td>
               <button className="action-btn delete-btn">Delete</button>
-              <Link to="/" className="action-btn edit-btn">
+              <Link to="/edit" className="action-btn edit-btn">
                 Edit
               </Link>
             </td>

@@ -1,82 +1,79 @@
 .addUser {
-    max-width: 500px;
+    max-width: 600px;
     margin: 50px auto;
-    padding: 30px;
-    background: #f4f4f9;
+    padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
 }
 
 .addUser h3 {
-    color: #4a4a4a;
+    text-align: center;
+    color: #333;
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .inputGroup {
     margin-bottom: 20px;
-    text-align: left;
 }
 
 .inputGroup label {
     display: block;
-    margin-bottom: 8px;
+    font-weight: 600;
     color: #333;
-    font-weight: bold;
+    margin-bottom: 8px;
 }
 
 .inputGroup input {
     width: 100%;
-    padding: 12px;
+    padding: 12px 20px;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 6px;
     font-size: 16px;
-    transition: all 0.3s ease;
-    background-color: #fff;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
 }
 
 .inputGroup input:focus {
-    border-color: #28a745;
-    box-shadow: 0 0 5px rgba(40, 167, 69, 0.3);
+    border-color: #6c63ff;
+    outline: none;
+    background-color: #fff;
 }
 
-.addUser button {
-    background-color: #28a745;
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
+button[type='submit'] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50; 
+    color: white;
     font-weight: bold;
     text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 100%;
 }
 
-.addUser button:hover {
-    background-color: #218838;
+button[type='submit']:hover {
+    background-color: #45A049; 
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
 }
 
 .addUser a {
     display: inline-block;
-    margin-top: 15px;
-    color: #333;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
     text-decoration: none;
+    border-radius: 6px;
     font-weight: bold;
-    transition: color 0.3s ease;
-    padding: 8px 15px;
-    background-color: #f4f4f9;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .addUser a:hover {
-    color: #28a745;
-    background-color: #f9f9f9;
-    border-color: #28a745;
+    background-color: #555;
+    transform: translateY(-2px);
 }

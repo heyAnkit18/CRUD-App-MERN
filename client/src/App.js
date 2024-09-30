@@ -3,6 +3,7 @@ import './App.css';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import User from './Components/GetUser/User';
 import Add from './Components/AddUser/Add';
+import Edit from './Components/UpdateUser/Edit';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
     },
     {
       path:"/edit",
-      element: "User Update page",
+      element: <Edit/>,
     },
 
   ])
