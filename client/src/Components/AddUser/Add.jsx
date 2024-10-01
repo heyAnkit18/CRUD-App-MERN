@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Add.css';
 import toast from 'react-hot-toast';
@@ -14,7 +14,8 @@ const Add = () => {
     };
 
     const [user, setUser] = useState(initialUserState);
-    
+    const navigate = useNavigate();
+
     const inputHandler = (e) => {
         const { name, value } = e.target;
         setUser(prevState => ({ ...prevState, [name]: value }));
@@ -27,7 +28,7 @@ const Add = () => {
             .then((response) => {
                 const successMessage = response.data.msg || "User added successfully!";
                 toast.success(successMessage, { position: "top-center" });  // Fallback message
-                
+                navigate('/');
             })
             .catch((error) => {
                 console.error(error);
