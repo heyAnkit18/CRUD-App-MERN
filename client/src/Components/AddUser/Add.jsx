@@ -26,8 +26,8 @@ const Add = () => {
 
         axios.post("http://localhost:8000/api/create", user)
             .then((response) => {
-                const successMessage = response.data.msg || "User added successfully!";
-                toast.success(successMessage, { position: "top-center" });  // Fallback message
+                const successMessage = response.data.msg || "User Added successfully!";
+                toast.success(successMessage, { position: "top-center" });
                 navigate('/');
             })
             .catch((error) => {
