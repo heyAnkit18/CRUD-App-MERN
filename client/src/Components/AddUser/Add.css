@@ -44,21 +44,22 @@
 
 button[type='submit'] {
     width: 100%;
-    padding: 12px;
-    background-color: #4CAF50; 
+    padding: 14px;
+    background-color: #00b894;
     color: white;
     font-weight: bold;
     text-transform: uppercase;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 16px;
 }
 
 button[type='submit']:hover {
-    background-color: #1ad024; 
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+    background-color: #00997d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 184, 148, 0.4);
 }
 
 .addUser a {
